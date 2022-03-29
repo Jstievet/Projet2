@@ -1,0 +1,95 @@
+/*Ici Css du Header*/
+header
+{
+    display: flex;
+    justify-content:space-between;
+    padding-left: 30px;
+    padding-right: 60px;
+    
+}
+header img
+{
+    width: 100px;
+    height: 40px;
+}
+header nav
+{
+    width: 20%;
+    display:flex;
+    justify-content:flex-end;
+   
+}
+/*MédiaQuery pour une largueur de max 768px , point de rupture 768px*/
+@media screen and (max-width: 768px )
+{
+        header
+        {
+        display: flex;
+        align-items: center;
+        flex-direction: column;         
+        }
+        header img
+        {
+            display: flex;
+            justify-content:center;
+            width: 80px;
+            height: 40px;
+        }
+        header nav
+        {
+        display:flex;
+        justify-content:center;
+   
+        }
+}
+
+/* Ici Css de la partie Main */
+/* ul et ul li i pour mettre en page la liste des filtres et les icones*/
+ul 
+{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+ul li
+{
+    border: 1px solid rgb(140, 224, 245); 
+    border-radius: 25%;
+}
+ul li i
+{
+    color: blue;
+    background-color:aquamarine ;
+    border-radius: 50%;
+}   
+/*La classe miniature correspond à l'affichage des photos dans le cadre hébergements*/
+.miniature
+{
+    width: 200px;
+    border-radius: 5%;
+    height: 135px;
+}
+/*La classe sectiongris correspond à l'affichage des section Hebergements et Les plus populaires*/
+.sectiongris
+{
+    background-color: rgb(228, 228, 228);
+    border-radius: 2%;
+    padding: 15px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+
+}
+/*La classe section1 correspond aux enssemble "chaque ligne d'article"*/
+.section1
+{
+    display: flex;
+    justify-content:space-around;
+}
+/*La classe .article correspond à l'affichage de tout les articles contenue dans le section hébergements*/
+.article
+{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5%;
+    margin-bottom: 20px;
+}
