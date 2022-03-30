@@ -1,62 +1,75 @@
 /*Ici Css du Header*/
-header
-{
-    display: flex;
-    justify-content:space-between;
-    padding-left: 30px;
-    padding-right: 60px;
-    
-}
-header img
-{
-    width: 100px;
-    height: 40px;
-}
-header nav
-{
-    width: 20%;
-    display:flex;
-    justify-content:flex-end;
-   
-}
-/*MédiaQuery pour une largueur de max 768px , point de rupture 768px*/
-@media screen and (max-width: 768px )
-{
-        header
-        {
-        display: flex;
-        align-items: center;
-        flex-direction: column;         
-        }
-        header img
-        {
+header  {
             display: flex;
-            justify-content:center;
-            width: 80px;
-            height: 40px;
-        }
-        header nav
-        {
-        display:flex;
-        justify-content:center;
-   
-        }
-}
+            justify-content:space-between;
+            padding-left: 30px;
+            padding-right: 60px;    
+        }        
+header .logo{
+                width: 100px;
+                height: 40px;
+            }
+.nav-position   {
+                    position: relative;
+                }
+.nav-text   {
+                list-style-type: none;
+                display:flex;
+                flex-direction: row;
+            }
+/*barre bleu supérieur apparait au survol de hébergement et acitvités*/
+.nav-text-bordure:hover {
+                            border-top: 1px solid blue;
+                            padding-top: 20px;
+                        }
+header nav  {
+                width: 20%;
+                display:flex;
+                justify-content:flex-end;   
+            }
+
 
 /* Ici Css de la partie Main */
+/*Barre de recherche*/
+.form-search{
+                position: relative;
+                
+            }
+/*Ici l'on cache l'icone utiliser en version mobile*/
+.form-button i{
+                display: none;          
+              }
+.container-search   {
+                        border: 1px solid black;
+                        
+                    }
+.container-search i {
+                        background-color: gray;
+                        border-radius: 10%;  
+                        margin: 3px;                    
+                    } 
+.container-search button{
+                            background-color:rgb(39, 94, 211);
+                            color: white;
+                            border-top-right-radius: 10px;
+                            border-bottom-right-radius: 10px;
+                            padding: 5px;
+                        }
+/*Partie Filtres*/
+
 /* ul et ul li i pour mettre en page la liste des filtres et les icones*/
-ul 
+.filtres 
 {
     display: flex;
     flex-direction: row;
     list-style-type: none;
 }
-ul li
+.filtres li
 {
     border: 1px solid rgb(140, 224, 245); 
     border-radius: 25%;
 }
-ul li i
+.filtres li i
 {
     color: blue;
     background-color:aquamarine ;
@@ -70,7 +83,7 @@ ul li i
     height: 135px;
 }
 /*La classe sectiongris correspond à l'affichage des section Hebergements et Les plus populaires*/
-.sectiongris
+.section-gris
 {
     background-color: rgb(228, 228, 228);
     border-radius: 2%;
@@ -78,7 +91,6 @@ ul li i
     width: 700px;
     display: flex;
     flex-direction: column;
-
 }
 /*La classe section1 correspond aux enssemble "chaque ligne d'article"*/
 .section1
@@ -93,3 +105,34 @@ ul li i
     border-radius: 5%;
     margin-bottom: 20px;
 }
+/* BEM regarder se qu'est le BEM */
+/*MédiaQuery pour une largueur de max 768px , point de rupture 768px*/
+@media screen and (max-width: 768px ){
+    header  {
+                display: flex;
+                align-items: center;
+                flex-direction: column;         
+            }
+    header .logo{
+                    display: flex;
+                    justify-content:center;
+                    width: 80px;
+                    height: 40px;
+                }
+    header nav  {
+                    position: relative;
+                    display:flex;
+                    justify-content:center;
+                }
+    .nav-text-bordure:hover {
+                                border-bottom: 1px solid blue;
+                                padding-bottom: 20px;
+                            }
+    .form-button-text   {
+                            display: none;
+                        }
+    .form-button i  {
+                            display:contents;          
+                    }
+    
+                                    }

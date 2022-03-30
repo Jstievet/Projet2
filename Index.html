@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/5b4a2d0a3d.js" crossorigin="anonymous"></script>
     <title>Projet2</title>
 </head>
 <body>
     <header>
-        <a href="images/logo/Booki@3x.png"><img src ="images/logo/Booki.png" alt="Logo"/></a>
-        <nav>
-            <a href="#hebergements">  Hébergements </a>&nbsp;&nbsp;&nbsp;
-            <a href="#activites">Activités</a>
+        <a href="./images/logo/Booki@3x.png"><img class="logo" src ="./images/logo/Booki.png" alt="Logo"/></a>
+        <nav class="nav-position">
+            <ul class="nav-text">
+            <li><a href="#hebergements" class="nav-text-bordure">  Hébergements </a></li>&nbsp;&nbsp;&nbsp;
+            <li><a href="#activites"class="nav-text-bordure">Activités</a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -23,12 +25,14 @@
                 Trouvez votre hébergement pour des vacances de rêve
             </h1>
             <p>En plein centre ville ou en pleine nature</p>
-            <form>
-                <i class="fa-solid fa-location-dot"></i>
-                <input></input>
-                <button>Rechercher</button>
+            <form class="form-search">
+                <span class="container-search">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input/>         
+                    <button class="form-button" ><i class="fa-solid fa-magnifying-glass"></i><span class="form-button-text">Rechercher</span></button>
+                </span>
             </form>
-            <ul>
+            <ul class="filtres">
                 <li>Filtres :</li>
                 <li><i class="fa-solid fa-money-bill-wave"></i> Economiques</li>
                 <li><i class="fa-solid fa-child-reaching"></i> Familial</li>
