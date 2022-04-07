@@ -1,38 +1,56 @@
 /*Police d'écriture de la page intégré avec googlefont*/
 body {
   font-family: "Raleway", sans-serif;
-  margin: 50px;
+  margin-left: 50px;
+  margin-top: 0px;
+  width: 100%;
 }
 /*Ici Css du Header*/
 header {
   display: flex;
   justify-content: space-between;
-  padding-left: 30px;
-  padding-right: 60px;
+  margin-right: 10px;
+  width: 80%;
 }
 header .logo {
-  width: 90px;
-  height: 45px;
+  width: 60px;
+  height: 25px;
+  padding-top: 30px;
 }
 .nav-position {
   position: relative;
   display: flex;
   justify-content: end;
+  width: 30%;
 }
 .nav-text {
   list-style-type: none;
   display: flex;
   flex-direction: row;
+  width: 100%;
+  margin-top: 0px;
+  padding-left: 0%;
+}
+.nav-text li {
+  width: 50%;
+  font-size: 14px;
+}
+
+.nav-text-bordure {
+  text-decoration: none;
+  border-top: 1px solid gray;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 30px;
+}
+.nav-text-bordure li {
+  width: 50%;
 }
 /*barre bleu supérieur apparait au survol de hébergement et acitvités*/
 .nav-text-bordure:hover {
   border-top: 1px solid blue;
-  padding-top: 60px;
-}
-header nav {
-  width: 20%;
-  display: flex;
-  justify-content: flex-end;
 }
 
 /* Ici Css de la partie Main */
@@ -45,15 +63,17 @@ header nav {
 .form-button i {
   display: none;
 }
+.form-button {
+  border: none;
+}
 .form-input {
-  height: 43px;
+  height: 34px;
 }
 
 .container-search {
   display: flex;
   justify-content: left;
-  height: 50px;
-  width: 50px;
+  height: 40px;
 }
 .form-icone-search {
   display: flex;
@@ -61,7 +81,7 @@ header nav {
   align-items: center;
   width: 25px;
   background-color: #f2f2f2;
-  font-size: 10px;
+  font-size: 14px;
   border-top-left-radius: 30%;
   border-bottom-left-radius: 30%;
   padding: 10px;
@@ -79,21 +99,61 @@ header nav {
 /*Partie Filtres*/
 
 /* .filtres pour mettre en page la liste des filtres et les icones*/
-.filtres {
+.filtre {
   display: flex;
   flex-direction: row;
   list-style-type: none;
+  padding-left: 0px;
 }
-.filtres li {
+.filtre ul {
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+}
+.filtre-premier-block {
+  display: flex;
+  flex-direction: row;
+}
+.filtre-second-block {
+  display: flex;
+  flex-direction: row;
+}
+.filtre li {
   border: 1px solid #f2f2f2;
-  border-radius: 25%;
+  border-radius: 15px;
+  font-size: 9px;
+  font-weight: bolder;
+  padding-right: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-.filtres li i {
+.filtre li:hover {
+  background-color: #0065fc;
+}
+.filtre-indication {
+  border: none;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.filtre li:nth-child(3) i {
+  width: 15px;
+  display: flex;
+  justify-content: center;
+}
+.filtre li i {
   color: #0065fc;
   background-color: #deebff96;
   border-radius: 50%;
-  font-size: 10px;
-  padding: 5px;
+  font-size: 12px;
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  width: 15px;
+  margin: 0%;
 }
 /*La classe miniature correspond à l'affichage des photos dans le cadre hébergements*/
 .miniature {
@@ -258,34 +318,88 @@ footer {
 
 /*MédiaQuery pour une largueur de max 768px , point de rupture 768px*/
 @media screen and (max-width: 768px) {
+  body {
+    margin: 0%;
+  }
   header {
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+    padding: 0%;
   }
   header .logo {
     display: flex;
     justify-content: center;
-    width: 80px;
-    height: 40px;
+    width: 60px;
+    height: 25px;
   }
   header nav {
     position: relative;
     display: flex;
     justify-content: center;
   }
-  /*En attente pour le placement de la balise nav
-    .nav-position   {
-                        width: 100%;
-                        display: flex;
-                        justify-content: space-around;
-                        
-                    }*/
+  .nav-text {
+    width: 100%;
+    padding-top: 0%;
+    display: flex;
+    justify-content: center;
+  }
+  .nav-position {
+    width: 100%;
+  }
   /*MediaQuery de barre de recherche pour version portable*/
+  .nav-text-bordure {
+    border-top: none;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+    width: 100%;
+  }
   .nav-text-bordure:hover {
-    border-top: 0px solid white;
+    border-top: none;
     border-bottom: 1px solid blue;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+  }
+  /*Positionnement barre des filtres*/
+  .filtre {
+    display: flex;
+    flex-direction: column;
+  }
+  .filtre-dernier-block {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .filtre div {
+    padding-bottom: 5px;
+  }
+  .section-search-filtre {
+    margin-left: 20px;
+  }
+  .container-search {
+    width: 90%;
+    height: 30px;
+  }
+
+  .form-input {
+    height: 26px;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  .form-icone-search {
+    width: 3%;
+  }
+  /*changement du titre h1*/
+  .section-search-filtre h1 {
+    font-size: 14px;
+    margin-left: 5%;
+    font-weight: bold;
+  }
+  .section-search-filtre p {
+    font-size: 10px;
   }
   .form-button-text {
     display: none;
