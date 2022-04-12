@@ -4,6 +4,8 @@ body {
   margin-left: 50px;
   margin-top: 0px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 /*Ici Css du Header*/
 header {
@@ -13,14 +15,16 @@ header {
   width: 80%;
 }
 header .logo {
-  width: 60px;
-  height: 25px;
+  width: 80px;
+  height: 40px;
   padding-top: 30px;
+  padding-left: 15px;
 }
+/* nav-position permet de gérer l'emplacement de la balise nav et ça taille*/
 .nav-position {
   position: relative;
   display: flex;
-  justify-content: end;
+  justify-content: space-around;
   width: 30%;
 }
 .nav-text {
@@ -29,7 +33,7 @@ header .logo {
   flex-direction: row;
   width: 100%;
   margin-top: 0px;
-  padding-left: 0%;
+  padding-left: 15%;
 }
 .nav-text li {
   width: 50%;
@@ -43,7 +47,7 @@ header .logo {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 30px;
+  padding-top: 46px;
 }
 .nav-text-bordure li {
   width: 50%;
@@ -59,7 +63,7 @@ header .logo {
   position: relative;
   border-collapse: collapse;
 }
-/*Ici l'on cache l'icone en version mobile*/
+/*Ici l'on cache l'icone présent dans la version mobile*/
 .form-button i {
   display: none;
 }
@@ -121,9 +125,10 @@ header .logo {
 .filtre li {
   border: 1px solid #f2f2f2;
   border-radius: 15px;
-  font-size: 9px;
+  font-size: 15px;
   font-weight: bolder;
   padding-right: 5px;
+
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -133,7 +138,7 @@ header .logo {
 }
 .filtre-indication {
   border: none;
-  font-size: 12px;
+  font-size: 15px;
   display: flex;
   align-items: center;
   padding-right: 10px;
@@ -155,29 +160,39 @@ header .logo {
   width: 15px;
   margin: 0%;
 }
-/*La classe miniature correspond à l'affichage des photos dans le cadre hébergements*/
-.miniature {
-  width: 220px;
-  border-radius: 10%;
-  height: 110px;
+/*La classe miniature-rogner correspond à l'affichage des photos dans le cadre hébergements*/
+
+.miniature-rogner {
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
 }
 h3 {
   font-size: 15px;
-  font-weight: bold;
+  font-weight: bolder;
+  margin-top: 5px;
+  padding-left: 10px;
+  margin-bottom: 0px;
 }
 /*La classe block-hebergement correspond à l'affichage de la section Hebergements*/
 .block-hebergement {
   background-color: #e4e4e494;
   border-radius: 2%;
   padding: 15px;
-  width: 800px;
+  width: 60%;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
+/*.block-hebergement correspond aux enssemble "chaque ligne d'article"*/
 .block-hebergement-ligne {
   display: flex;
   justify-content: space-around;
+  width: 100%;
 }
+/*gestion des étoiles de la section hebergement */
 .block-hebergements-star {
   display: flex;
   flex-direction: row;
@@ -185,44 +200,49 @@ h3 {
   list-style-type: none;
   padding-left: 10px;
   padding-bottom: 10px;
-  margin-top: 0px;
+  margin-top: 3px;
   color: #0065fc;
+  font-size: 11px;
 }
+/*gestion de l'arrière plan de la section hebergements */
 .block-hebergements-star-gris {
   color: #c9c7c7;
   display: flex;
   align-items: center;
 }
-
-/*La classe section1 correspond aux enssemble "chaque ligne d'article"*/
-
 /*La classe .article correspond à l'affichage de tout les articles contenue dans le section hébergements*/
 .article {
   background-color: rgb(255, 255, 255);
   border-radius: 10%;
   margin-bottom: 20px;
+  margin-left: 35px;
+  margin-right: 10px;
   padding-top: 5px;
   padding-right: 5px;
   padding-left: 5px;
-  height: 190px;
+  width: 30%;
+  height: 200px;
   box-shadow: rgba(100, 100, 111, 0.281) 0px 7px 15px 0px;
 }
-.article h3,
-p {
-  margin-top: 0px;
+.article p {
+  padding-left: 5px;
+  margin-top: 5px;
+  margin-left: 5px;
   margin-bottom: 5px;
-  padding-left: 10px;
+  font-size: 12px;
+  font-weight: bolder;
 }
-/* block-hebergements-populaire contient les deux grand block */
+/*block-populaire est l'enssemble en colonne sur la droite nommer les plus populaires */
 .block-populaire {
   background-color: #e4e4e494;
   border-radius: 2%;
   padding: 15px;
-  width: 330px;
+  width: 25%;
   display: flex;
   flex-direction: column;
   margin-left: 40px;
 }
+/* block-hebergements-populaire contient les deux grand block */
 .block-hebergement-populaire {
   display: flex;
   flex-direction: row;
@@ -235,38 +255,55 @@ p {
   padding-top: 5px;
   padding-right: 5px;
   padding-left: 5px;
-  height: 130px;
-  width: 320px;
+  height: 25%;
   box-shadow: rgba(100, 100, 111, 0.281) 0px 7px 15px 0px;
   display: flex;
   flex-direction: row;
 }
+.article-populaire h3 {
+  padding-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-size: 12px;
+  font-weight: bolder;
+}
 .miniature-populaire {
-  width: 125px;
+  width: 130px;
   border-radius: 10%;
-  height: 125px;
+  border-top-right-radius: 0%;
+  border-bottom-right-radius: 0%;
+  height: 120px;
+  object-fit: cover;
 }
 .article-populaire-description {
   padding-left: 10px;
+  display: flex;
+  flex-direction: column;
 }
 .article-populaire-description h3 {
-  padding-left: 10px;
+  padding-left: 0px;
 }
 .block-populaire-star {
   color: #0065fc;
-  padding-left: 10px;
+  padding-left: 0px;
   display: flex;
+  font-size: 11px;
+  margin-top: 8%;
 }
 /*le block activités à marseille*/
 #activites {
   display: flex;
   flex-direction: column;
-  width: 1300px;
+  width: 97%;
+  height: 465px;
+  padding-bottom: 30px;
 }
 .article-activite-position {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 100%;
+  width: 97%;
 }
 .article-activite-position h3 {
   padding-left: 15px;
@@ -276,40 +313,122 @@ p {
   flex-direction: column;
   border: 1px solid #f2f2f2;
   border-radius: 15px;
-  box-shadow: #424141 2px 2px 12px;
+  box-shadow: #f2f2f2 3px 3px 10px;
+  margin-right: 2%;
+  width: 20%;
+  height: 100%;
 }
-.article-activite-double {
+
+.article-activite-double-fort-frioul {
+  width: 20%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  margin-right: 3%;
 }
-.article-activite-double-border {
+.article-activite-double-fort {
+  width: 100%;
+  height: 230px;
   border: 1px solid #f2f2f2;
   border-radius: 15px;
-  box-shadow: #424141 2px 2px 12px;
-  margin-bottom: 30px;
+  box-shadow: #f2f2f2 3px 3px 10px;
 }
-.miniature-article-activite-small {
-  width: 300px;
-  height: 180px;
+.article-activite-double-fort-miniature {
+  width: 100%;
+  height: 75%;
   border-radius: 15px;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.article-activite-double-frioul {
+  width: 100%;
+  height: 40%;
+  border: 1px solid #f2f2f2;
+  border-radius: 15px;
+  box-shadow: #f2f2f2 3px 3px 10px;
+}
+.article-activite-double-frioul-miniature {
+  width: 100%;
+  height: 65%;
+  border-radius: 15px;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.article-activite-double-dame-parc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 2%;
+  height: 100%;
+  width: 20%;
+}
+.article-activite-double-dame {
+  width: 100%;
+  height: 50%;
+  border: 1px solid #f2f2f2;
+  border-radius: 15px;
+  box-shadow: #f2f2f2 3px 3px 10px;
+}
+.article-activite-double-dame-miniature {
+  width: 100%;
+  height: 65%;
+  border-radius: 15px;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.article-activite-double-parc {
+  width: 100%;
+  height: 40%;
+  border: 1px solid #f2f2f2;
+  border-radius: 15px;
+  box-shadow: #f2f2f2 3px 3px 10px;
+}
+.article-activite-double-parc-miniature {
+  width: 100%;
+  height: 75%;
+  border-radius: 15px;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 .miniature-article-activite-big {
-  width: 300px;
-  height: 440px;
+  width: 100%;
+  height: 400px;
   border-radius: 15px;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+  object-fit: cover;
 }
 /*le footer*/
 footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
   background-color: #c9c7c7;
   margin-top: 40px;
   padding-bottom: 40px;
 }
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #c9c7c7;
+  width: 100%;
+}
 .footer-colonne {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 10%;
+  margin-right: 15%;
 }
 .footer-colonne ul {
   list-style-type: none;
@@ -331,8 +450,9 @@ footer {
   header .logo {
     display: flex;
     justify-content: center;
-    width: 60px;
-    height: 25px;
+    width: 50%;
+    height: 20%;
+    padding-left: 25%;
   }
   header nav {
     position: relative;
@@ -344,9 +464,12 @@ footer {
     padding-top: 0%;
     display: flex;
     justify-content: center;
+    padding-left: 0%;
   }
   .nav-position {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
   /*MediaQuery de barre de recherche pour version portable*/
   .nav-text-bordure {
@@ -412,30 +535,41 @@ footer {
   .block-hebergement {
     background-color: #e4e4e494;
     border-radius: 2%;
-    padding: 15px;
-    width: 330px;
+    width: 90%;
     display: flex;
     flex-direction: column;
-    margin-left: 15%;
+    justify-content: flex-start;
+    background-color: white;
   }
 
   .block-hebergement-ligne {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+  }
+  .article {
+    width: 90%;
+    margin-left: 0%;
   }
   .block-populaire {
     margin-bottom: 20px;
-    margin-left: 15%;
+    width: 90%;
+    margin-left: 0%;
   }
-  .miniature {
-    width: 320px;
+  .article-populaire {
+    width: 90%;
+    font-size: 12px;
+  }
+  .miniature-rogner {
+    width: 100%;
   }
 
   /*block-hebergement-populaire permet de manipuler et mettre en page les 2 gros blocks hebergement et populaire*/
   .block-hebergement-populaire {
     display: flex;
     flex-direction: column-reverse;
-    align-items: center;
+    align-items: flex-start;
+    width: 90%;
   }
   .article-activite {
     margin-bottom: 15px;
@@ -452,8 +586,8 @@ footer {
     justify-content: center;
   }
   .miniature-article-activite-big {
-    width: 300px;
-    height: 150px;
+    width: 100%;
+    height: 100%;
     border-radius: 15px;
   }
   .miniature-article-activite-small {
@@ -467,11 +601,15 @@ footer {
     flex-direction: column;
     justify-content: center;
     width: 250px;
-    background-color: #c9c7c7;
+
     margin-top: 40px;
     margin-left: 15%;
     padding-left: 20px;
     padding-bottom: 40px;
+  }
+  .footer-container {
+    margin-left: 0%;
+    background-color: #c9c7c7;
   }
   .footer-colonne {
     display: flex;
@@ -492,22 +630,24 @@ footer {
   }
   .block-hebergement {
     margin-bottom: 10px;
+    width: 95%;
   }
   .block-hebergement-ligne {
     display: flex;
     flex-direction: row;
   }
   .block-populaire {
+    width: 95%;
     margin-left: 0px;
-    width: 800px;
   }
   .block-article-populaire {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
   }
   .article-populaire {
-    margin-right: 5px;
+    margin-right: 20px;
+    width: 33%;
   }
   .article-populaire-description {
     display: flex;
@@ -516,8 +656,11 @@ footer {
     margin-top: 0px;
   }
   .article-populaire-description h3 {
-    margin-top: 0px;
+    margin-top: 10px;
     margin-bottom: 5px;
+  }
+  .article-populaire-description p {
+    margin-top: 10px;
   }
   .block-hebergement-populaire {
     display: flex;
