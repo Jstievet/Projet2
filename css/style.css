@@ -59,6 +59,10 @@ h1 {
   border-top: 1px solid blue;
   color: #0065fc;
 }
+/*.nav-text-bordure: {
+  border-top: 1px solid blue;
+  color: #0065fc;
+}*/
 
 /* Ici Css de la partie Main */
 .section-search-filtre {
@@ -300,6 +304,7 @@ h3 {
   border-radius: 20px;
   margin-bottom: 27px;
   padding: 5px;
+  max-height: 130px;
   box-shadow: rgba(100, 100, 111, 0.281) 0px 7px 15px 0px;
   display: flex;
   flex-direction: row;
@@ -548,12 +553,12 @@ footer {
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
     margin-bottom: 27px;
-    margin-right: 5px;
+    margin-right: 20px;
     box-shadow: rgba(100, 100, 111, 0.281) 0px 7px 15px 0px;
     display: flex;
     flex-direction: row;
-    width: 33%;
-    max-height: 150px;
+    width: 30%;
+    max-height: 130px;
   }
   .card-cadre-miniature {
     width: 100%;
@@ -704,22 +709,27 @@ footer {
   .form-button i {
     display: contents;
   }
-
+  /*block-hebergement-populaire permet de manipuler et mettre en page les 2 gros blocks hebergement et populaire*/
+  .block-hebergement-populaire {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+  }
   /*block Hebergement à mettre en colonne*/
   .block-hebergement {
     background-color: #e4e4e494;
     border-radius: 2%;
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     background-color: white;
   }
 
-  .block-hebergement-ligne {
+  .card-hebergement-ligne {
     display: flex;
     flex-direction: column;
-    justify-content: center;
   }
   .article {
     width: 90%;
@@ -727,24 +737,27 @@ footer {
   }
   .block-populaire {
     margin-bottom: 20px;
-    width: 90%;
+    width: 100%;
     margin-left: 0%;
   }
-  .article-populaire {
-    width: 90%;
-    font-size: 12px;
+  /*Ici on redéfinie la taille du cadre de la card hébergement */
+  .card-column {
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    padding: 5px;
+    max-width: 467px;
+    min-height: 250px;
+    box-shadow: rgba(100, 100, 111, 0.281) 0px 7px 15px 0px;
+  }
+  .card-cadre-column {
+    height: 300px;
+    width: 100%;
   }
   .miniature-rogner {
     width: 100%;
   }
 
-  /*block-hebergement-populaire permet de manipuler et mettre en page les 2 gros blocks hebergement et populaire*/
-  .block-hebergement-populaire {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    width: 90%;
-  }
   .article-activite {
     margin-bottom: 15px;
   }
@@ -775,9 +788,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-
     margin-top: 40px;
-    margin-left: 15%;
     padding-left: 20px;
     padding-bottom: 40px;
   }
