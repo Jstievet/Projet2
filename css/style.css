@@ -845,6 +845,8 @@ footer {
     margin-bottom: 20px;
     width: 100%;
     margin-left: 0%;
+    display: flex;
+    flex-direction: column;
   }
   /*Ici on redéfinie la taille du cadre de la card hébergement */
   .card-column {
