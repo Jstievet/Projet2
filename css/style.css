@@ -63,7 +63,10 @@ h1 {
   border-top: 1px solid blue;
   color: #0065fc;
 }
-
+.nav-text li:first-child {
+  border-top: 1px solid blue;
+  color: #0065fc;
+}
 /* Ici Css de la partie Main */
 .section-search-filtre {
   padding-left: 50px;
@@ -279,6 +282,7 @@ h3 {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  margin-right: 50px;
 }
 .block-populaire-titre-icone {
   display: flex;
@@ -296,10 +300,10 @@ h3 {
   border-radius: 20px;
   padding: 15px;
   width: 40%;
-  max-width: 400px;
+  max-width: 350px;
   display: flex;
   flex-direction: column;
-  margin-left: 40px;
+  margin-left: 20px;
   margin-top: 25px;
 }
 .card-row-populaire {
@@ -369,7 +373,7 @@ h3 {
 .card-activite-position-column {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-around;
   width: 100%;
 }
 .card-activite {
@@ -401,7 +405,7 @@ h3 {
   width: 100%;
   min-height: 195px;
   border: 1px solid #f2f2f2;
-  border-radius: 15px;
+  border-radius: 20px;
   box-shadow: #f2f2f2 3px 3px 10px;
   margin-bottom: 30px;
 }
@@ -509,14 +513,13 @@ footer {
   justify-content: flex-start;
   background-color: #c9c7c7;
   margin-top: 40px;
-  padding-bottom: 40px;
 }
 .footer-container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   background-color: #c9c7c7;
-  width: 100%;
+  width: 90%;
 }
 .footer-colonne {
   display: flex;
@@ -621,28 +624,83 @@ footer {
     display: flex;
     flex-direction: column;
     margin-left: 0;
-    m-width: 768px;
+    min-width: 768px;
   }
-  .article-activite {
+  .card-activite {
     margin-bottom: 30px;
+    min-width: 50%;
+    margin-right: 0;
   }
   .card-activite-position {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    max-height: fit-content;
+  }
+  .card-activite-position-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .card-cadre-big-miniature-activite {
-    min-width: 200px;
-    height: 420px;
-    border-radius: 15px;
+    min-width: 100%;
+    height: 200px;
+    border-radius: 20px;
   }
-  .miniature-article-activite-small {
-    width: 300px;
-    height: 150px;
-    border-radius: 15px;
+  /*gestion du block card activite double fort frioul*/
+  .card-activite-double-fort-frioul {
+    min-width: 100%;
+    margin-right: 0;
+  }
+  .card-activite-fort {
+    margin-bottom: 30px;
+    min-width: 50%;
+    max-width: 300px;
+  }
+  .card-cadre-miniature-fort {
+    min-width: 100%;
+    height: 200px;
+    border-radius: 20px;
+  }
+  .card-activite-frioul {
+    margin-bottom: 30px;
+    min-width: 50%;
+    max-width: 300px;
+    height: fit-content;
+  }
+  .card-cadre-miniature-frioul {
+    min-width: 100%;
+    height: 200px;
+    border-radius: 20px;
+  }
+  /*gestion du second block d'activite */
+  .card-activite-double-dame-parc {
+    min-width: 100%;
+    margin-right: 0;
+  }
+  .card-activite-dame {
+    margin-bottom: 30px;
+    min-width: 50%;
+    max-width: 300px;
+    height: fit-content;
+  }
+  .card-cadre-miniature-dame {
+    min-width: 100%;
+    height: 200px;
+    border-radius: 20px;
+  }
+  .card-activite-parc {
+    margin-bottom: 30px;
+    min-width: 50%;
+    max-width: 300px;
+    height: fit-content;
+  }
+  .card-cadre-miniature-parc {
+    min-width: 100%;
+    height: 200px;
+    border-radius: 20px;
   }
 }
-
 /*MédiaQuery pour une largueur de max 768px , point de rupture 768px*/
 @media screen and (max-width: 768px) {
   .container {
@@ -686,7 +744,6 @@ footer {
     border-top: none;
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid gray;
     padding-bottom: 10px;
     width: 100%;
   }
@@ -694,6 +751,9 @@ footer {
     border-top: none;
     border-bottom: 1px solid blue;
     padding-bottom: 10px;
+  }
+  .nav-text li:first-child {
+    border-top: none;
   }
   /*Positionnement barre des filtres*/
   .filtre {
@@ -761,6 +821,7 @@ footer {
   .card-hebergement-ligne {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .article {
     width: 90%;
@@ -773,19 +834,20 @@ footer {
   }
   /*Ici on redéfinie la taille du cadre de la card hébergement */
   .card-column {
-    border-radius: 15px;
     margin-bottom: 20px;
     margin-right: 0;
     padding: 5px;
-    max-width: 467px;
-    min-height: 250px;
+    width: 100%;
+    min-width: 70%;
+    min-height: 240px;
     box-shadow: rgba(100, 100, 111, 0.281) 0px 7px 15px 0px;
+    justify-content: flex-start;
   }
   .card-cadre-column {
     height: 150px;
     width: 100%;
   }
-  /*activites permet d'adapter le block au format téléphone*/
+  /*gestion de la partie activite*/
   #activites {
     display: flex;
     flex-direction: column;
@@ -800,14 +862,20 @@ footer {
     justify-content: flex-start;
     align-items: center;
     min-width: 415px;
+    max-height: fit-content;
+  }
+  .card-activite-position-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
   }
   .card-activite {
-    border-radius: 15px;
     margin-bottom: 20px;
     margin-right: 0;
     padding: 5px;
     width: 100%;
-    min-width: 467px;
+    min-width: 70%;
     min-height: 240px;
     box-shadow: rgba(100, 100, 111, 0.281) 0px 7px 15px 0px;
     justify-content: flex-start;
@@ -815,43 +883,83 @@ footer {
   .card-miniature-activite-big {
     width: 100%;
     height: 100%;
-    border-radius: 15px;
   }
   .card-cadre-big-miniature-activite {
-    height: 170px;
+    height: 200px;
     width: 100%;
   }
-
+  /*gestion du cadre double pour activite fort de pormègue et iles du frioul*/
   .card-activite-double-fort-frioul {
-    width: 100%;
-    display: flex;
+    min-width: 70%;
+    margin-right: 0;
   }
   .card-activite-fort {
-    border-radius: 20px;
+    border-radius: 15px;
     margin-bottom: 20px;
     margin-right: 0;
     padding: 5px;
     width: 100%;
-    min-width: 450px;
-    min-height: 170px;
+    min-width: 70%;
+    min-height: 240px;
     box-shadow: rgba(100, 100, 111, 0.281) 0px 7px 15px 0px;
-    display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
   }
   .card-cadre-miniature-fort {
-    width: 100%;
-    height: 170px;
-    border-radius: 15px;
+    height: 200px;
+    border-radius: 20px;
   }
-  .card-activite-fort-miniature {
-    height: 100%;
+  .card-activite-frioul {
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    padding: 5px;
     width: 100%;
+    min-width: 70%;
+    min-height: 240px;
+    box-shadow: rgba(100, 100, 111, 0.281) 0px 7px 15px 0px;
+    justify-content: flex-start;
+  }
+  .card-cadre-miniature-frioul {
+    height: 200px;
+    border-radius: 20px;
+  }
+  /*gestion des activite notre dame de la garde et parc longchamp*/
+  .card-activite-double-dame-parc {
+    min-width: 70%;
+    margin-right: 0;
+  }
+  .card-activite-dame {
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    padding: 5px;
+    width: 100%;
+    min-width: 70%;
+    min-height: 240px;
+    box-shadow: rgba(100, 100, 111, 0.281) 0px 7px 15px 0px;
+    justify-content: flex-start;
+  }
+  .card-cadre-miniature-dame {
+    height: 200px;
+    border-radius: 20px;
+  }
+  .card-activite-parc {
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    padding: 5px;
+    width: 100%;
+    min-width: 70%;
+    min-height: 240px;
+    box-shadow: rgba(100, 100, 111, 0.281) 0px 7px 15px 0px;
+    justify-content: flex-start;
+  }
+  .card-cadre-miniature-parc {
+    height: 200px;
+    border-radius: 20px;
   }
   /*le footer*/
   footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     width: 100%;
     margin-top: 40px;
     padding-left: 20px;
