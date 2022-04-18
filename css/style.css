@@ -52,7 +52,7 @@ header .logo {
   width: 50%;
 }
 h1 {
-  font-size: 21px;
+  font-size: 23px;
 }
 /*barre bleu supérieur apparait au survol de hébergement et acitvités*/
 .nav-text-bordure:hover {
@@ -152,7 +152,7 @@ h1 {
 .filtre li {
   border: 1px solid #f2f2f2;
   border-radius: 20px;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: bolder;
   display: flex;
   flex-direction: row;
@@ -179,9 +179,9 @@ h1 {
 .filtre i {
   color: #0065fc;
   background-color: #deebff96;
-  border-radius: 20px;
-  font-size: 12px;
-  padding: 11px;
+  border-radius: 25px;
+  font-size: 15px;
+  padding: 16px;
   display: flex;
   justify-content: center;
   width: 15px;
@@ -281,8 +281,7 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  max-width: 95%;
-  margin-right: 50px;
+  max-width: 100%;
 }
 .block-populaire-titre-icone {
   display: flex;
@@ -305,7 +304,7 @@ h3 {
   max-width: 350px;
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
+  margin-left: 0;
   margin-top: 25px;
 }
 .block-card-populaire {
@@ -547,7 +546,7 @@ footer {
   padding-bottom: 15px;
 }
 /*Media query pour l'aspect tablette compris pour une largueur entre 768px et 992px */
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 769px) and (max-width: 992px) {
   .container {
     max-width: 992px;
   }
@@ -590,6 +589,9 @@ footer {
     max-width: 991px;
     width: 100%;
   }
+  .card-column {
+    margin-left: 15px;
+  }
   .card-populaire {
     margin-right: 20px;
     width: 30%;
@@ -598,17 +600,17 @@ footer {
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
     margin-bottom: 27px;
-    margin-right: 20px;
+    margin-right: 242px;
     box-shadow: rgba(100, 100, 111, 0.281) 0px 7px 15px 0px;
     display: flex;
     flex-direction: row;
-    width: 30%;
+    width: 90%;
     max-height: 130px;
   }
   .card-cadre-miniature {
     width: 100%;
     max-width: 120px;
-    min-height: 100px;
+    max-height: 100px;
   }
   .card-populaire-description {
     display: flex;
@@ -717,8 +719,9 @@ footer {
 }
 /*MédiaQuery pour une largueur de max 768px , point de rupture 768px*/
 @media screen and (max-width: 768px) {
+  /*changement des images suivant la largueur de l'écran*/
   .container {
-    max-width: 767px;
+    max-width: 768px;
   }
   body {
     margin: 0%;
@@ -826,12 +829,18 @@ footer {
     background-color: #e4e4e494;
     border-radius: 20px;
     width: 100%;
+    padding: 0;
+    margin-left: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     background-color: white;
   }
-
+  .block-hebergement-afficher-plus {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 100px;
+  }
   .card-hebergement-ligne {
     display: flex;
     flex-direction: column;
@@ -847,6 +856,10 @@ footer {
     margin-left: 0%;
     display: flex;
     flex-direction: column;
+  }
+  .block-card-populaire {
+    flex-direction: column;
+    align-items: center;
   }
   /*Ici on redéfinie la taille du cadre de la card hébergement */
   .card-column {
@@ -885,7 +898,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 100%;
+    min-width: 100%;
   }
   .card-activite {
     margin-bottom: 20px;
@@ -893,8 +906,9 @@ footer {
     padding: 5px;
     width: 100%;
     min-width: 70%;
-    min-height: 240px;
+    min-height: 200px;
     box-shadow: rgba(100, 100, 111, 0.281) 0px 7px 15px 0px;
+    display: flex;
     justify-content: flex-start;
   }
   .card-miniature-activite-big {
@@ -902,7 +916,7 @@ footer {
     height: 100%;
   }
   .card-cadre-big-miniature-activite {
-    height: 200px;
+    height: 150px;
     width: 100%;
   }
   /*gestion du cadre double pour activite fort de pormègue et iles du frioul*/
@@ -932,12 +946,12 @@ footer {
     padding: 5px;
     width: 100%;
     min-width: 70%;
-    min-height: 240px;
+    min-height: 200px;
     box-shadow: rgba(100, 100, 111, 0.281) 0px 7px 15px 0px;
     justify-content: flex-start;
   }
   .card-cadre-miniature-frioul {
-    height: 200px;
+    height: 150px;
     border-radius: 20px;
   }
   /*gestion des activite notre dame de la garde et parc longchamp*/
@@ -979,14 +993,20 @@ footer {
   footer {
     width: 100%;
     margin-top: 40px;
-    padding-left: 20px;
     padding-bottom: 40px;
   }
   .footer-container {
     margin-left: 0%;
     background-color: #c9c7c7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
   }
   .footer-colonne {
+    width: 40%;
+    margin-right: 0;
     display: flex;
     flex-direction: column;
   }
