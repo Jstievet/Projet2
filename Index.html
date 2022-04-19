@@ -213,14 +213,31 @@
               <a href="#">
                 <article class="card-row-populaire">
                   <div class="card-cadre-miniature">
-                    <!-- <source media="(max-width:768px)" srcset=".\images\hebergements\4_small\emile-guillemot-Bj_rcSC5XfE-unsplash.jpg">
-                                    <source media="(min-width:769px , max-width:991px)" srcset=".\images\hebergements\3_medium\emile-guillemot-Bj_rcSC5XfE-unsplash.jpg">
-                                    <source media="(min-width:992px)"srcset=".\images\hebergements\2_large\emile-guillemot-Bj_rcSC5XfE-unsplash.jpg">-->
-                    <img
-                      class="card-row-miniature-populaire"
-                      src="./images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
-                      alt="Hotel le soleil du matin"
-                    />
+                    <picture>
+                      <source
+                        media="(max-width:768px)"
+                        srcset="
+                          .\images\hebergements\4_small\emile-guillemot-Bj_rcSC5XfE-unsplash.jpg
+                        "
+                      />
+                      <source
+                        media="(min-width:769px , max-width:991px)"
+                        srcset="
+                          .\images\hebergements\3_medium\emile-guillemot-Bj_rcSC5XfE-unsplash.jpg
+                        "
+                      />
+                      <source
+                        media="(min-width:992px)"
+                        srcset="
+                          .\images\hebergements\2_large\emile-guillemot-Bj_rcSC5XfE-unsplash.jpg
+                        "
+                      />
+                      <img
+                        class="card-row-miniature-populaire"
+                        src="./images/hebergements/2_large/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
+                        alt="Hotel le soleil du matin"
+                      />
+                    </picture>
                   </div>
                   <div class="card-populaire-description">
                     <h3>Hotel le soleil du matin</h3>

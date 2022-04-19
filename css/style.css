@@ -1,6 +1,7 @@
 .container {
   width: 100%;
   max-width: 1440px;
+  margin: auto;
 }
 a {
   text-decoration: none;
@@ -842,7 +843,7 @@ footer {
   }
   .block-hebergement-afficher-plus {
     font-size: 20px;
-    font-weight: bolder;
+    font-weight: bold;
     margin-left: 100px;
   }
   .card-hebergement-ligne {
