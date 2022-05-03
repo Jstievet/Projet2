@@ -166,6 +166,8 @@ h1 {
   justify-content: center;
   width: 15px;
   margin: 0%;
+  position: relative;
+  margin-left: -5px;
 }
 /* petite icone infos dans paragraphe sous filtres */
 .info-logement i {
@@ -201,6 +203,9 @@ h1 {
   display: flex;
   flex-direction: column;
 }
+.block-hebergement h2 {
+  padding-left: 4%;
+}
 .block-hebergement-card {
   display: flex;
   flex-direction: row;
@@ -227,8 +232,7 @@ h1 {
 }
 /*La classe card-column-miniature correspond à l'affichage des photos dans le cadre hébergements*/
 .card-column-miniature {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-radius: 20px 20px 0 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -263,6 +267,7 @@ h1 {
   color: #0065fc;
   font-size: 11px;
 }
+/*mise en page du texte afficher plus sous les cards avec effet changement de curseur*/
 .block-hebergement-afficher-plus {
   display: flex;
   justify-content: flex-start;
@@ -300,9 +305,11 @@ h1 {
   margin-left: 0;
   margin-top: 25px;
 }
+/*block contenant les card de la section populaire*/
 .block-card-populaire {
   min-width: 100%;
 }
+/*mise en forme des card de la section populaire */
 .card-row-populaire {
   background-color: rgb(255, 255, 255);
   border-radius: 20px;
@@ -314,15 +321,16 @@ h1 {
   display: flex;
   flex-direction: row;
 }
+/*cadre de la miniature des card populaire */
 .card-cadre-miniature {
   max-width: 40%;
   min-height: 111px;
 }
+/* définition de la taille et de l'affichage de la miniature */
 .card-row-miniature-populaire {
   width: 100%;
   height: 100%;
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px;
+  border-radius: 20px 0 0 20px;
   object-fit: cover;
 }
 .card-populaire-description p {
@@ -399,9 +407,7 @@ h1 {
 .card-miniature-activite-big {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
-  border-bottom-left-radius: 0%;
-  border-bottom-right-radius: 0%;
+  border-radius: 20px 20px 0 0;
   object-fit: cover;
 }
 .card-activite-fort {
@@ -418,14 +424,14 @@ h1 {
   min-width: 200px;
   height: 150px;
 }
+/*définition des caractèristique de l'image */
 .card-activite-fort-miniature {
   width: 100%;
   height: 100%;
-  border-radius: 15px;
-  border-bottom-left-radius: 0%;
-  border-bottom-right-radius: 0%;
+  border-radius: 20px 20px 0 0;
   object-fit: cover;
 }
+/*définition du premier cadre contenant 2 activité en colonne */
 .card-activite-double-fort-frioul {
   width: 45%;
   height: 100%;
@@ -434,6 +440,7 @@ h1 {
   align-items: center;
   margin-right: 50px;
 }
+/*définition de la card Iles du frioul*/
 .card-activite-frioul {
   width: 100%;
   height: 150px;
@@ -441,19 +448,20 @@ h1 {
   border-radius: 15px;
   box-shadow: #f2f2f2 5px 5px 10px;
 }
+/* définition du cadre ou se situe l'image du lieu */
 .card-cadre-miniature-frioul {
   width: 100%;
   min-width: 200px;
   height: 110px;
 }
+/*définition de l'image que contient la card activite iles de frioul*/
 .card-activite-frioul-miniature {
   width: 100%;
   height: 100%;
-  border-radius: 15px;
-  border-bottom-left-radius: 0%;
-  border-bottom-right-radius: 0%;
+  border-radius: 20px 20px 0 0;
   object-fit: cover;
 }
+/*définition du second cadre contenant 2 activitées */
 .card-activite-double-dame-parc {
   width: 45%;
   min-width: 150px;
@@ -461,6 +469,7 @@ h1 {
   flex-direction: column;
   align-items: center;
 }
+/* définition de la card notre dame de la garde */
 .card-activite-dame {
   width: 100%;
   height: 190px;
@@ -469,20 +478,21 @@ h1 {
   box-shadow: #f2f2f2 5px 5px 10px;
   margin-bottom: 54px;
 }
+/*défintion du cadre de l'image de la card notre dame de la garde */
 .card-cadre-miniature-dame {
   width: 100%;
   min-width: 200px;
   height: 140px;
 }
+/*définition de l'image de la card notre dame de la garde*/
 .card-activite-dame-miniature {
   width: 100%;
   height: 100%;
-  border-radius: 15px;
-  border-bottom-left-radius: 0%;
-  border-bottom-right-radius: 0%;
+  border-radius: 20px 20px 0 0;
   object-fit: cover;
   margin-bottom: 10px;
 }
+/*définition de la card parc longchamp*/
 .card-activite-parc {
   width: 100%;
   height: 200px;
@@ -490,6 +500,7 @@ h1 {
   border-radius: 15px;
   box-shadow: #f2f2f2 5px 5px 10px;
 }
+/*définition de l'image de la card parc longchamp*/
 .card-cadre-miniature-parc {
   width: 100%;
   min-width: 200px;
@@ -498,9 +509,7 @@ h1 {
 .card-activite-parc-miniature {
   width: 100%;
   height: 100%;
-  border-radius: 15px;
-  border-bottom-left-radius: 0%;
-  border-bottom-right-radius: 0%;
+  border-radius: 20px 20px 0 0;
   object-fit: cover;
   margin-bottom: 10px;
 }
@@ -553,6 +562,9 @@ footer {
   .container-search {
     width: 100%;
     height: 50px;
+  }
+  .filtre {
+    min-width: 771px;
   }
   .block-hebergement {
     margin-bottom: 10px;
