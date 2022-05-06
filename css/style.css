@@ -1,3 +1,4 @@
+/* container contient l'intégralité du contenue*/
 .container {
   width: 100%;
   max-width: 1440px;
@@ -84,6 +85,7 @@ h1 {
   width: 20%;
   display: none;
 }
+/*formulaire permettant la saisie d'une ville non fonctionnionel mais champ actif*/
 .form-input {
   width: 50%;
   border-left: none;
@@ -734,7 +736,6 @@ footer {
 }
 /*MédiaQuery pour une largueur de max 768px , point de rupture 768px*/
 @media screen and (max-width: 768px) {
-  /*changement des images suivant la largueur de l'écran*/
   .container {
     max-width: 768px;
   }
